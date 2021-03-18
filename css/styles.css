@@ -150,6 +150,7 @@ nav-list-link:hover {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: #212121;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-list-link:hover,
@@ -165,6 +166,7 @@ nav-list-link:hover {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: #757575;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contacts-link:hover,
@@ -235,11 +237,13 @@ nav-list-link:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
+  outline: none;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:active {
-  background: #188ce8;
+  background-color: #188ce8;
   border: none;
 }
 
@@ -426,6 +430,7 @@ nav-list-link:hover {
   width: 44px;
   border-radius: 50%;
   /* border: 1px solid red; */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .stuff-social-list-link:hover,
@@ -470,6 +475,7 @@ nav-list-link:hover {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   cursor: pointer;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-list-item {
@@ -483,6 +489,7 @@ nav-list-link:hover {
   align-items: center;
   justify-content: center;
   fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-list-link:hover,
@@ -540,6 +547,7 @@ nav-list-link:hover {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #ffffff;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress-link-location:focus,
@@ -554,6 +562,7 @@ nav-list-link:hover {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress-link:hover,
@@ -584,6 +593,7 @@ nav-list-link:hover {
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-link:hover,
@@ -598,11 +608,7 @@ nav-list-link:hover {
   align-items: center;
   justify-content: center;
   fill: #ffffff;
-}
-
-.social-list-link:hover .social-list-icon,
-.social-list-link:focus .social-list-icon {
-  background-color: var(--accent-color-primary);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*=================END FOOTER=====================*/
@@ -626,6 +632,8 @@ nav-list-link:hover {
 
 .project-list-item {
   flex-basis: calc(100% / 3 - 30);
+  /* position: relative;
+  width: 370px; */
   margin-left: 30px;
   margin-bottom: 30px;
   /* outline: 1px solid teal; */
@@ -693,5 +701,33 @@ nav-list-link:hover {
   text-align: left;
   border: 1px solid #eeeeee;
   border-top: none;
+}
+
+.project-link-content-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+  height: 100%;
+  overflow: auto;
+  transform: translateY(100%);
+  font-family: var(--main-font);
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: #ffffff;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-link:hover .overlay,
+.project-link:focus .overlay {
+  transform: translateY(0%);
 }
 /*===============END PORTFOLIO PAGE================*/
